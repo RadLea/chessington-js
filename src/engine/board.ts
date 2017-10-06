@@ -4,6 +4,7 @@ import Square from './square';
 import Piece from './pieces/piece';
 
 export default class Board {
+
     public currentPlayer: Player;
     private readonly board: (Piece | undefined)[][];
 
