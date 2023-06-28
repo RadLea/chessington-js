@@ -8,6 +8,16 @@ export default class Pawn extends Piece {
     }
 
     public getAvailableMoves(board: Board) {
-        return new Array(0);
+        const pawnPos = board.findPiece(this);
+        const movesArr = [];
+        if (this.player === Player.WHITE) {
+            pawnPos.row++;
+        } else {
+            pawnPos.row--;
+        }
+        if (board.getPiece(pawnPos) === undefined) {
+            movesArr.push(pawnPos);
+        }
+        return movesArr;
     }
 }
