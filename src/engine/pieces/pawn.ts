@@ -11,7 +11,7 @@ export default class Pawn extends Piece {
     public getAvailableMoves(board: Board) {
         const pawnPos = board.findPiece(this);
         const movesArr = [];
-        
+
         let modifierOne = 0;
         let modifierTwo = 0;
 
